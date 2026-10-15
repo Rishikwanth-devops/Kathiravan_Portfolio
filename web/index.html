@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <base href="$FLUTTER_BASE_HREF">
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Kathiravan K | Flutter Developer</title>
+  <meta name="description" content="Portfolio of Kathiravan K, a Flutter developer from Chennai with 3+ years of experience shipping cross-platform apps to Google Play and the App Store.">
+  <meta name="theme-color" content="#070B1A">
+  <meta name="author" content="Kathiravan K">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Kathiravan K | Flutter Developer">
+  <meta property="og:description" content="Fast, polished cross-platform apps with Flutter and Dart. View projects, download the resume and get in touch.">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+  <link rel="manifest" href="manifest.json">
+  <style>
+    html, body { margin: 0; height: 100%; background: #070B1A; }
+    #splash {
+      position: fixed; inset: 0; display: flex; flex-direction: column;
+      align-items: center; justify-content: center; gap: 22px;
+      background: #070B1A; z-index: 10; transition: opacity .4s ease;
+    }
+    #splash .logo {
+      font: 700 44px/1 'Segoe UI', system-ui, sans-serif; letter-spacing: -1px;
+      background: linear-gradient(90deg, #7C5CFF, #22D3EE);
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+    }
+    #splash .bar { width: 120px; height: 3px; border-radius: 3px; background: #1a2140; overflow: hidden; }
+    #splash .bar::after {
+      content: ""; display: block; width: 40%; height: 100%;
+      background: linear-gradient(90deg, #7C5CFF, #22D3EE);
+      animation: slide 1s ease-in-out infinite;
+    }
+    @keyframes slide { 0% { transform: translateX(-100%); } 100% { transform: translateX(300%); } }
+  </style>
+</head>
+<body>
+  <div id="splash"><div class="logo">KK.</div><div class="bar"></div></div>
+  <script>
+    window.addEventListener('flutter-first-frame', function () {
+      var s = document.getElementById('splash');
+      if (!s) return;
+      s.style.opacity = '0';
+      setTimeout(function () { s.remove(); }, 450);
+    });
+  </script>
+  <script src="flutter_bootstrap.js" async></script>
+</body>
+</html>
